@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "0aef7c70-8671-478c-a403-5b5b1ad9305b",
+		"_postman_id": "69f0cf40-02b8-43ef-a44b-faec142cc83a",
 		"name": "User Movie Tests Demo",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27850608"
 	},
 	"item": [
 		{
@@ -11,7 +12,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "2b905396-5053-40f6-be87-34c840a5f67e",
 						"exec": [
 							"pm.test('health check should fail', function (){",
 							"    pm.response.to.have.status(401);",
@@ -25,12 +25,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/",
+					"raw": "http://localhost:4444/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "4444",
 					"path": [
 						""
 					]
@@ -44,7 +44,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f44cc945-9fd2-4de3-87c2-a90319f68389",
 						"exec": [
 							"pm.test('health check should PASS', function (){",
 							"    pm.response.to.have.status(200);",
@@ -64,12 +63,12 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:3000/",
+					"raw": "http://localhost:4444/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "4444",
 					"path": [
 						""
 					]
@@ -83,7 +82,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "5e0f21df-3def-4e77-8f40-f03fbc58f1d6",
 						"exec": [
 							"let date = Date.now();",
 							"let email = 'steve.' + date + '@themovies.org';",
@@ -95,7 +93,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c35b3af0-a540-4086-9d63-3ef7e03637c7",
 						"exec": [
 							"pm.test('Created user', function(){",
 							"    pm.response.to.have.status(201);",
@@ -127,12 +124,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/users/register",
+					"raw": "http://localhost:4444/api/users/register",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "4444",
 					"path": [
 						"api",
 						"users",
@@ -148,7 +145,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9704d448-9516-4e92-9602-f6bf9556d24f",
 						"exec": [
 							"pm.test('logged in', function(){",
 							"    pm.response.to.have.status(200);",
@@ -177,12 +173,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/users/tokens/",
+					"raw": "http://localhost:4444/api/users/tokens/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "4444",
 					"path": [
 						"api",
 						"users",
@@ -199,7 +195,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6fb0bee2-f7be-4bbe-be7e-8e693faa42b8",
 						"exec": [
 							"pm.test('Created Movie for user 1', function(){",
 							"    pm.response.to.have.status(201);",
@@ -231,12 +226,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/movies",
+					"raw": "http://localhost:4444/api/movies",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "4444",
 					"path": [
 						"api",
 						"movies"
@@ -251,7 +246,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "96690164-5f05-4151-8d8a-73abd1cfd929",
 						"exec": [
 							"pm.test('Created 2nd Movie for user 1', function(){",
 							"    pm.response.to.have.status(201);",
@@ -283,12 +277,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/movies",
+					"raw": "http://localhost:4444/api/movies",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "4444",
 					"path": [
 						"api",
 						"movies"
@@ -303,7 +297,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "004b9623-4d78-4001-a403-29e99f2fb1d0",
 						"exec": [
 							"pm.test('got all movies', function(){",
 							"    pm.response.to.have.status(200);",
@@ -329,12 +322,12 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:3000/api/movies",
+					"raw": "http://localhost:4444/api/movies",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "4444",
 					"path": [
 						"api",
 						"movies"
@@ -349,7 +342,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "483f8c96-1a9d-44b1-8377-aa3df432554a",
 						"exec": [
 							"pm.test('got a specific movie', function(){",
 							"    pm.response.to.have.status(200);",
@@ -369,12 +361,12 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:3000/api/movies/{{movie1u1}}",
+					"raw": "http://localhost:4444/api/movies/{{movie1u1}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "4444",
 					"path": [
 						"api",
 						"movies",
@@ -390,7 +382,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1c587934-9cf9-4a74-b89c-e18ab47741b8",
 						"exec": [
 							"pm.test('got a specific movie', function(){",
 							"    pm.response.to.have.status(200);",
@@ -410,12 +401,12 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:3000/api/movies/{{movie1u1}}",
+					"raw": "http://localhost:4444/api/movies/{{movie1u1}}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "4444",
 					"path": [
 						"api",
 						"movies",
@@ -431,7 +422,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d25fc724-cb19-43b8-afda-abc227a3a6f1",
 						"exec": [
 							"pm.test('got all movies AGAIN', function(){",
 							"    pm.response.to.have.status(200);",
@@ -457,12 +447,12 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:3000/api/movies",
+					"raw": "http://localhost:4444/api/movies",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "4444",
 					"path": [
 						"api",
 						"movies"
@@ -471,6 +461,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
